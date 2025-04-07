@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Q3 {
+public class Q03 {
 
     public static boolean isBalanced(String input) {
         Stack<Character> stack = new Stack<>();
