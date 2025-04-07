@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q1
+public class Q01
 {
 
     public static String adadebozorg(String num1, String num2) 
