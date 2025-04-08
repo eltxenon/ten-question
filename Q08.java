@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Q8 {
+public class Q08 {
     public static void main(String[] args) {
         // نمونه آرایه
         int[] numbers = {3, 5, 2, 3, 5, 3, 8, 2, 5};
