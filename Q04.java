@@ -1,7 +1,9 @@
 import java.util.Random;
 
-public class Q04 {
-    public static void main(String[] args) {
+public class Q04 
+{
+    public static void main(String[] args) 
+    {
         int shir = 0;  
         int khat = 0;  
         int kool = 1000;  
@@ -9,8 +11,10 @@ public class Q04 {
         Random random = new Random();
 
        
-        for (int i = 0; i < kool; i++) {
-            if (random.nextBoolean()) { 
+        for (int i = 0; i < kool; i++)
+            {
+            if (random.nextBoolean()) 
+            { 
                 shir++;
             } else {  
                 khat++;
