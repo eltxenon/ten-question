@@ -26,13 +26,13 @@ public class Q01
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("عدد اول (تا 15 رقم): ");
+        System.out.print("adad aval ra vared konid");
         String number1 = scanner.nextLine();
 
-        System.out.print("عدد دوم (تا 15 رقم): ");
+        System.out.print("adad dovom ra vared konid");
         String number2 = scanner.nextLine();
 
         String sum = addBigNumbers(number1, number2);
-        System.out.println("جمع دو عدد: " + sum);
+        System.out.println(sum);
     }
 }
