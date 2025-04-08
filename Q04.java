@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Q4 {
+public class Q04 {
     public static void main(String[] args) {
         int shir = 0;  
         int khat = 0;  
