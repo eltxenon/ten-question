@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Q9 {
+public class Q09 {
     public static void main(String[] args) {
         int numCandidates = 5;
         int numVoters = 25;
