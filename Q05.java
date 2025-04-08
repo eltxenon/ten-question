@@ -1,15 +1,18 @@
 import java.util.Scanner;
 
-public class Q05 {
+public class Q05 
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("عدد مورد نظر را وارد کنید: ");
+        System.out.print("adad ra vared konid");
         String number = scanner.nextLine();
 
-        if (number.length() % 2 != 0) {
-            System.out.println("❌ تعداد رقم‌ها باید زوج باشد.");
+        if (number.length() % 2 != 0) 
+        {
+            System.out.println(" adad vared shode fard ast");
             return;
         }
 
@@ -17,18 +20,21 @@ public class Q05 {
         int sumFirstHalf = 0;
         int sumSecondHalf = 0;
 
-        for (int i = 0; i < mid; i++) {
+        for (int i = 0; i < mid; i++)
+            {
             sumFirstHalf += Character.getNumericValue(number.charAt(i));
         }
 
-        for (int i = mid; i < number.length(); i++) {
+        for (int i = mid; i < number.length(); i++) 
+        {
             sumSecondHalf += Character.getNumericValue(number.charAt(i));
         }
 
-        if (sumFirstHalf == sumSecondHalf) {
-            System.out.println("✅ مجموع نیمه اول و دوم برابر است.");
+        if (sumFirstHalf == sumSecondHalf) 
+        {
+            System.out.println("barabar ast");
         } else {
-            System.out.println("❌ مجموع نیمه اول و دوم برابر نیست.");
+            System.out.println("barabar nist");
         }
     }
 }
