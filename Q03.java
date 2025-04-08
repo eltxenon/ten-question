@@ -3,7 +3,7 @@ import java.util.Stack;
 
 public class Q03 {
 
-    public static boolean isBalanced(String input) {
+    public static boolean sheklha(String input) {
         Stack<Character> stack = new Stack<>();
 
         for (char ch : input.toCharArray()) {
@@ -32,7 +32,7 @@ public class Q03 {
         System.out.print("reshte ha ra vared konid");
         String input = scanner.nextLine();
 
-        if (isBalanced(input)) {
+        if (sheklha(input)) {
             System.out.println("tartib dorost ast");
         } else {
             System.out.println("tattib nadorost ast");
