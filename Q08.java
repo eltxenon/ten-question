@@ -1,23 +1,32 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
+import java.util.Scanner;
 
-public class Q08 {
+public class practice8 {
     public static void main(String[] args) {
-        // نمونه آرایه
-        int[] numbers = {3, 5, 2, 3, 5, 3, 8, 2, 5};
+        Scanner scan=new Scanner(System.in);
+        System.out.println("andazeh arayeh ra vared conid: ");
+        int andazeh=scan.nextInt();
+        int[] arr=new int[andazeh];
+        int check;
+        int sum;
 
-        // استفاده از HashMap برای شمارش تکرارها
-        Map<Integer, Integer> countMap = new HashMap<>();
-
-        for (int num : numbers) {
-            // اگر عدد قبلاً در map هست، مقدارش را یک واحد افزایش بده
-            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+        for(int i=0;i<andazeh;i++){
+            System.out.print("vared conide: ");
+            arr[i]=scan.nextInt();
         }
-
-        // نمایش تعداد تکرار هر عدد
-        System.out.println("تعداد تکرار هر عدد:");
-        for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
-            System.out.println("عدد " + entry.getKey() + " : " + entry.getValue() + " بار");
+        Arrays.sort(arr);
+        
+        for(int i=0;i<andazeh;i++){
+            sum=1;
+            check=arr[i];
+            for(int j=i+1;j<andazeh;j++){
+                if(check==arr[j]){
+                    sum+=1;
+                    i+=1;
+                    
+                }    
+            }
+            System.out.println("adad "+arr[i]+" ="+sum);
         }
     }
 }
