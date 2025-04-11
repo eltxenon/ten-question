@@ -4,28 +4,28 @@ public class Q09 {
     public static void main(String[] args) {
         int numCandidates = 5;
         int numVoters = 25;
-        int[] votes = new int[numCandidates]; // آرایه رای‌ها برای هر کاندید
+        int[] votes = new int[numCandidates];
         int blankVotes = 0;
 
         Random random = new Random();
 
         for (int i = 1; i <= numVoters; i++) {
-            int vote = random.nextInt(numCandidates + 1); // عدد بین 0 تا 5 (0 = رای سفید)
+            int vote = random.nextInt(numCandidates + 1); 
 
             if (vote == 0) {
                 blankVotes++;
-                System.out.println("شرکت‌کننده " + i + " رای سفید داد.");
+                System.out.println("sherkat konandeh" + i + " raye sefid dad");
             } else {
                 votes[vote - 1]++;
-                System.out.println("شرکت‌کننده " + i + " به کاندید شماره " + vote + " رای داد.");
+                System.out.println("sherkat konandeh " + i + " be" + vote + " raye  dad");
             }
         }
 
-        System.out.println("\nنتیجه نهایی رای‌گیری:");
+        System.out.println("\natijeh:");
         for (int i = 0; i < numCandidates; i++) {
-            System.out.println("کاندید شماره " + (i + 1) + " : " + votes[i] + " رای");
+            System.out.println("shomare" + (i + 1) + " : " + votes[i] + " raye");
         }
 
-        System.out.println("تعداد آراء سفید: " + blankVotes);
+        System.out.println("tedad raye sefid" + blankVotes);
     }
 }
