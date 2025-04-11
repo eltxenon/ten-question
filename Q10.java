@@ -1,39 +1,37 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class Q10 {
+public class practice10 {
     public static void main(String[] args) {
-        int numCandidates = 5;
-        int numVoters = 10;
-        String[] candidates = {"A", "B", "C", "D", "E"};
-        Map<String, Integer> scores = new HashMap<>();
 
-        for (String candidate : candidates) {
-            scores.put(candidate, 0);
-        }
+        Scanner scan=new Scanner(System.in);
+        String[] kandid={"A","B","C","D","E","HICHI"};
+        int[] emtiaz={0,0,0,0,0,0};
+        System.out.println("A B C D E");
 
-        Random random = new Random();
-        System.out.println("برگه‌های رأی:");
+        for(int i=0;i<2;i++){
 
-        for (int i = 0; i < numVoters; i++) {
-            List<String> ballot = new ArrayList<>(Arrays.asList(candidates));
-            Collections.shuffle(ballot, random); // ترتیب تصادفی برای هر رأی‌دهنده
+            System.out.println(i+1+" : RAYE SHOMA:");
+            String r=scan.nextLine();
+            String[] R=r.split(" ");
 
-            System.out.println("رأی‌دهنده " + (i + 1) + ": " + ballot);
+            for(int j=0;j<5;j++){
 
-            for (int j = 0; j < ballot.size(); j++) {
-                String candidate = ballot.get(j);
-                int point = numCandidates - j - 1; // اولی 4 امتیاز، دومی 3، ...
-                scores.put(candidate, scores.get(candidate) + point);
+                String result=R[j];
+
+                switch(result){
+                    case "A":emtiaz[0]+=5-j;break;
+                    case "B":emtiaz[1]+=5-j;break;
+                    case "C":emtiaz[2]+=5-j;break;
+                    case "D":emtiaz[3]+=5-j;break;
+                    case "E":emtiaz[4]+=5-j;break;
+                    case " ":emtiaz[5]+=1;break;
+                    default:emtiaz[5]+=1;break;
+                }
             }
         }
-
-        System.out.println("\nامتیاز نهایی کاندیداها:");
-        for (String candidate : candidates) {
-            System.out.println("کاندید " + candidate + " : " + scores.get(candidate) + " امتیاز");
+        for(int i=0;i<6;i++){
+            System.out.println(kandid[i]+" = "+ emtiaz[i]);
         }
-
-        // پیدا کردن برنده
-        String winner = Collections.max(scores.entrySet(), Map.Entry.comparingByValue()).getKey();
-        System.out.println("\n✅ برنده انتخابات: کاندید " + winner);
+        scan.close();
     }
 }
